@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MainInfoSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="167c072c4c8" ></w:Config>
+	<e:Image source="main_info_jpg"/>
+	<e:Image id="imgClose" source="btn_back2_png"  x="31.77" y="24.75" scaleX="0.7" scaleY="0.7"/>
+</e:Skin>

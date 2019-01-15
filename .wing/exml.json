@@ -1,0 +1,55 @@
+{
+  "166100dcb43": {
+    "path": "game\\MainScene.ts",
+    "class": "MainScene",
+    "parentPath": ""
+  },
+  "166154f6699": {
+    "path": "game\\pattern.ts",
+    "class": "pattern",
+    "parentPath": ""
+  },
+  "16615503923": {
+    "path": "game\\PatternScene.ts",
+    "class": "PatternScene",
+    "parentPath": ""
+  },
+  "global": {
+    "globalAutoLayerMarkEnable": true
+  },
+  "1661a4cdc53": {
+    "path": "game\\play\\HandleUI.ts",
+    "class": "HandleUI",
+    "parentPath": ""
+  },
+  "16622fbd8af": {
+    "path": "game\\play\\OrdinaryUI.ts",
+    "class": "OrdinaryUI",
+    "parentPath": ""
+  },
+  "16624bd3407": {
+    "path": "game\\play\\CheckUI.ts",
+    "class": "CheckUI",
+    "parentPath": ""
+  },
+  "1665d418e4e": {
+    "path": "game\\play\\ChooseUI.ts",
+    "class": "ChooseUI",
+    "parentPath": ""
+  },
+  "16661eb0201": {
+    "path": "game\\play\\RankingUI.ts",
+    "class": "RankingUI",
+    "parentPath": ""
+  },
+  "167c072c4c8": {
+    "path": "game\\play\\MainInfo.ts",
+    "class": "MainInfo",
+    "parentPath": ""
+  },
+  "167c547c0ef": {
+    "path": "game\\play\\ErrUI.ts",
+    "class": "ErrUI",
+    "parentPath": ""
+  }
+}

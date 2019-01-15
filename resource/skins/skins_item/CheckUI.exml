@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CheckUISkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="16624bd3407" ></w:Config>
+	<e:Image source="check_bg_png" horizontalCenter="0" y="592"/>
+	<e:Image id="btnDa" source="" x="117.5" y="1386"/>
+	<e:Image id="btnHuan" source="" x="348" y="1386"/>
+	<e:Image source="check_input_jpg" horizontalCenter="-85" y="743.67"/>
+	<e:Image id="imgText" horizontalCenter="0.5" width="413" height="121" y="612"  source="" name="" anchorOffsetY="0"/>
+	<e:ToggleButton id="mbtnYse" name="肯定"  horizontalCenter="144.5" y="745.67">
+		<e:Skin states="up,down,disabled,disabledAndSelected" >
+			<e:Image id="imgBtn" source="check_yes_png" width.down="90%" height.down="90%"  width="100%" height="100%" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+	</e:ToggleButton>
+	<e:TextInput id="textCheck" inputType="text" prompt="请输入验证码" width="206" height="29" horizontalCenter="-87" y="750.67"  anchorOffsetX="0" anchorOffsetY="0"/>
+	<e:Label id="textError" text="输入有误，请重新输入" size="14" textColor="0xff0000" x="117.5" y="794.9" alpha="0"/>	
+</e:Skin>

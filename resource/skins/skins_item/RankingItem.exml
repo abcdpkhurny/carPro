@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RankingItem" width="120" height="170" xmlns:e="http://ns.egret.com/eui">
+    <e:Image source="{data.image}" width="100" height="100" horizontalCenter="0" y="35"/>
+    <e:Label size="24" textColor="0xffffff" text="{data.no}" horizontalCenter="0" y="5"/>
+    <e:Label size="24" textColor="0xffffff" text="{data.text}" horizontalCenter="0.5" y="141"/>
+</e:Skin>
