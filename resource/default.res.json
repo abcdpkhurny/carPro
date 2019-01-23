@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,btn_red_png,btn_yellow_png,icon_ranking_png,main_start_png,btn_normal_png,btn_racing_png,btn_back_png,play_bg_jpg,play_blue_png,play_right_png,play_yellow_png,play_end_png,check_bg_png,check_da_jpg,check_huan_jpg,check_input_jpg,check_yes_png,check_text0_jpg,check_yes1_png,icon_barrier1_png,icon_barrier2_png,icon_barrier0_png,btn_restart_png,ranking_bg_png,btn_rback_png,btn_back_blue_png,btn_replay_png,btn_choose_ranking_png,btn_choose_ranking2_png,btn_page_ranking_png,btn_restart_ranking_png,img_bg_ranking_png,img_bg_ranking2_png,img_ranking_png,img_row_png,img_row2_png,tu_png,main1_bg_jpg,btn_ranking_png,main_info_jpg,btn_back2_png,icon_info_png,choose_bg_png,icon_black_png,icon_grey_png,icon_life_png,icon_su_png,btn_accredit_png,bg_back_png,btn_white_png,btn_xuan_png,btn_xuan1_png,icon_xuan_png,play_car0_png,play_car1_png,play_car2_png,play_car3_png,play_car4_png,icon_loading_car_png",
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,btn_red_png,btn_yellow_png,icon_ranking_png,main_start_png,btn_normal_png,btn_racing_png,btn_back_png,play_bg_jpg,play_blue_png,play_right_png,play_yellow_png,play_end_png,check_bg_png,check_da_jpg,check_huan_jpg,check_input_jpg,check_yes_png,check_text0_jpg,check_yes1_png,icon_barrier1_png,icon_barrier2_png,icon_barrier0_png,btn_restart_png,ranking_bg_png,btn_rback_png,btn_back_blue_png,btn_replay_png,btn_choose_ranking_png,btn_choose_ranking2_png,btn_page_ranking_png,btn_restart_ranking_png,img_bg_ranking_png,img_bg_ranking2_png,img_ranking_png,img_row_png,img_row2_png,tu_png,main1_bg_jpg,btn_ranking_png,main_info_jpg,btn_back2_png,icon_info_png,choose_bg_png,icon_black_png,icon_life_png,icon_su_png,btn_accredit_png,bg_back_png,btn_white_png,btn_xuan_png,btn_xuan1_png,icon_xuan_png,play_car0_png,play_car1_png,play_car2_png,play_car3_png,play_car4_png,icon_loading_car_png,icon_black1_png",
 			"name": "preload"
 		},
 		{
@@ -366,11 +366,6 @@
 			"name": "icon_black_png"
 		},
 		{
-			"url": "art/check/icon_grey.png",
-			"type": "image",
-			"name": "icon_grey_png"
-		},
-		{
 			"url": "art/play/icon_life.png",
 			"type": "image",
 			"name": "icon_life_png"
@@ -454,6 +449,11 @@
 			"url": "art/loading/icon_loading_car.png",
 			"type": "image",
 			"name": "icon_loading_car_png"
+		},
+		{
+			"url": "art/check/icon_black1.png",
+			"type": "image",
+			"name": "icon_black1_png"
 		}
 	]
 }
