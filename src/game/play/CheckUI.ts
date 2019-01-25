@@ -1,3 +1,6 @@
+/**
+ * 切片检验类
+ */
 class CheckUI extends eui.Component implements eui.UIComponent {
 	private btnDa: eui.Button
 	private btnHuan: eui.Button
@@ -24,6 +27,8 @@ class CheckUI extends eui.Component implements eui.UIComponent {
 
 	protected childrenCreated(): void {
 		super.childrenCreated();
+		//调节页面高度，避免键盘弹出错位
+		this.height = GameConst.StageH
 		if (!this.loading) {
 			this.loading = new LoadingUI()
 		}

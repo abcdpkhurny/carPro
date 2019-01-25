@@ -1,11 +1,14 @@
+/**
+ * 资源加载类
+ */
 class LoadingBar extends egret.Sprite implements RES.PromiseTaskReporter {
-	public background: egret.Bitmap;
-	public bar: egret.Bitmap;
+	public background: egret.Bitmap;		//读条背景图片
+	public bar: egret.Bitmap;				//读条图片
 	public barMask: egret.Rectangle;
 	public bg: egret.Bitmap;
 
-	public _bg: string
-	public _bar: string
+	public _bg: string		//读条背景
+	public _bar: string		//读条
 	private textField: egret.TextField; // 文本
 	private timeText;		//定时器
 	private imgCar: egret.Bitmap;
@@ -16,16 +19,27 @@ class LoadingBar extends egret.Sprite implements RES.PromiseTaskReporter {
 	public constructor(_bg: string, _bar: string) {
 		super();
 		// 当被添加到舞台的时候触发 (被添加到舞台,说明资源组已经加载完成)
-		this._bg = _bg
-		this._bar = _bar
+		this._bg = _bg 		//读条背景
+		this._bar = _bar	//读条
 		this.addEventListener(egret.Event.ADDED_TO_STAGE, this.createView, this)
 	}
 
 	public createView() {
 		this.width = this.stage.stageWidth
 		this.height = this.stage.stageHeight
-		this.bg = GameConst.CreateBitmapByName("main_bg_jpg")
+		var iconB = GameConst.CreateBitmapByName("icon_back_png")
+		this.addChild(iconB)
+		iconB.width = this.width
+		iconB.height = this.height
+
+		this.bg = GameConst.CreateBitmapByName("main_item_bg_png")
 		this.addChild(this.bg)
+		this.bg.y = this.height - this.bg.height
+
+		var logo = GameConst.CreateBitmapByName("icon_logo_png")
+		this.addChild(logo)
+		logo.x = this.width / 2 - logo.width / 2
+		logo.y = 167 / 1136 * this.height
 
 		this.background = new egret.Bitmap(RES.getRes(this._bg));
 		this.bar = new egret.Bitmap(RES.getRes(this._bar));
@@ -50,15 +64,15 @@ class LoadingBar extends egret.Sprite implements RES.PromiseTaskReporter {
 		this.textField.textAlign = "center";
 		this.textField.text = '正努力加载中'
 		var t = 1
-        this.timeText = window.setInterval(() => {
-            var tt = '正努力加载中'
-            for (var i = 0; i < t; i++) {
-                tt = tt + "."
-            }
-            t++
-            if (t > 3) t = 1
-            this.textField.text = tt
-        }, 600)
+		this.timeText = window.setInterval(() => {
+			var tt = '正努力加载中'
+			for (var i = 0; i < t; i++) {
+				tt = tt + "."
+			}
+			t++
+			if (t > 3) t = 1
+			this.textField.text = tt
+		}, 600)
 
 		//跟随进度条的图片
 		this.imgCar = GameConst.CreateBitmapByName("icon_loading_car_png")

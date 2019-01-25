@@ -46,6 +46,14 @@ class GameConst {
 		return loadingMask
 	}
 
+	/**适屏配置 y调节*/
+	public static screenDeploy(list: any[], height: number) {
+		for (var i = 0; i < list.length; i++) {
+			var data = list[i]
+			data.y = data.y / height * GameConst.StageH
+		}
+	}
+
 	/**
 	 * 块显示，删除
 	 */
@@ -76,7 +84,7 @@ class GameConst {
 		request.send();
 		return request
 	}
-	
+
 	/**移除子类方法 */
 	public static removeChild(child: egret.DisplayObject) {
 		if (child && child.parent) {

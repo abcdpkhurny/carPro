@@ -2,9 +2,15 @@
  * 游戏模式选择类
  */
 class PatternScene extends eui.Component implements eui.UIComponent {
+	public imgBg: eui.Image
+
+	public imgLogo: eui.Image
 	public mbtnRacing: eui.ToggleButton;
 	public mbtnNormal: eui.ToggleButton;
 	public mbtnBack: eui.ToggleButton;
+	public labRacing: eui.Label
+	public labNormal: eui.Label
+
 	public mbtns: eui.ToggleButton[];
 
 	private testText: eui.TextInput;
@@ -19,6 +25,9 @@ class PatternScene extends eui.Component implements eui.UIComponent {
 
 	protected childrenCreated(): void {
 		super.childrenCreated();
+		var list: any[] = [this.imgLogo, this.labRacing, this.labNormal, this.mbtnRacing, this.mbtnNormal, this.mbtnBack]
+		GameConst.screenDeploy(list, this.height)
+		this.imgBg.y = GameConst.StageH - this.imgBg.height
 		this.mbtns = [this.mbtnRacing, this.mbtnNormal, this.mbtnBack];
 		for (var i: number = this.mbtns.length - 1; i > -1; --i) {
 			// 事件委托, 点击按钮的时候触发toggleBtn
@@ -34,9 +43,9 @@ class PatternScene extends eui.Component implements eui.UIComponent {
 		let url = GameConst.url + "fecthSessionId.do"
 		let param = "openId=123"
 		let req = GameConst.reqGetJSON(url + "?" + param);
-		req.addEventListener(egret.Event.COMPLETE,()=>{
+		req.addEventListener(egret.Event.COMPLETE, () => {
 			console.log(JSON.parse(req.response))
-		},this)
+		}, this)
 	}
 
 	/**

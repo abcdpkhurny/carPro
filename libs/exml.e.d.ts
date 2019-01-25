@@ -64,7 +64,7 @@ declare class RacingUISkin extends eui.Skin{
 }
 declare class RankingUISkin extends eui.Skin{
 }
-declare class Btn_black extends eui.Skin{
+declare class Btn_blackSkin extends eui.Skin{
 }
 declare class CheckUISkin extends eui.Skin{
 }

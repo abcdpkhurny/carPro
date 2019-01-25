@@ -2,11 +2,16 @@
  * 主页面场景类
  */
 class MainScene extends eui.Component implements eui.UIComponent {
+	public imgBg: eui.Image
+
+	public imgLogo: eui.Image
 	public mbtnStart: eui.ToggleButton;
 	public mbtnShare: eui.ToggleButton;
 	public mbtnInfo: eui.ToggleButton;
 	public mbtnRanking: eui.ToggleButton;
-	public mbtnMore: eui.ToggleButton;
+	public labInfo: eui.Label
+	public labRanking: eui.Label
+
 	public mbtns: eui.ToggleButton[];
 
 	public constructor() {
@@ -23,7 +28,12 @@ class MainScene extends eui.Component implements eui.UIComponent {
 
 	protected childrenCreated(): void {
 		super.childrenCreated();
-		this.mbtns = [this.mbtnStart, this.mbtnShare, this.mbtnInfo, this.mbtnRanking, this.mbtnMore];
+		//适屏误差补充MainScene
+		var list: any[] = [this.imgLogo, this.labInfo, this.labRanking, this.mbtnStart, this.mbtnShare, this.mbtnInfo, this.mbtnRanking]
+		GameConst.screenDeploy(list, this.height)
+		this.imgBg.y = GameConst.StageH - this.imgBg.height
+		console.log(this.imgLogo.y)
+		this.mbtns = [this.mbtnStart, this.mbtnShare, this.mbtnInfo, this.mbtnRanking];
 		for (var i: number = this.mbtns.length - 1; i > -1; --i) {
 			// 事件委托, 点击按钮的时候触发toggleBtn
 			this.mbtns[i].addEventListener(egret.TouchEvent.TOUCH_TAP, (e) => {

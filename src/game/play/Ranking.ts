@@ -8,6 +8,7 @@ class Ranking {
 
 	private obj: egret.DisplayObjectContainer;
 
+	private iconB: egret.Bitmap
 	private bg: egret.Bitmap;
 	/** 0为竞速，1为普通 */
 	public type: number;
@@ -23,7 +24,8 @@ class Ranking {
 	public rankingTime;
 
 	public constructor() {
-		this.bg = GameConst.CreateBitmapByName("main1_bg_jpg")
+		this.bg = GameConst.CreateBitmapByName("main_item_bg_png")
+		this.iconB = GameConst.CreateBitmapByName("icon_back_png")
 		//排行榜按钮
 		this.btnStart = new eui.Image();
 		this.btnStart.source = "btn_restart_ranking_png";
@@ -101,6 +103,7 @@ class Ranking {
 		if (this.isdisplay) {
 			GameConst.Ranking.parent && GameConst.Ranking.parent.removeChild(GameConst.Ranking);
 			this.rankingListMask.parent && this.rankingListMask.parent.removeChild(this.rankingListMask);
+			this.iconB.parent && this.iconB.parent.removeChild(this.iconB);
 			this.bg.parent && this.bg.parent.removeChild(this.bg);
 			//关闭排行榜按钮
 			GameConst.removeChild(this.btnStart)
@@ -113,7 +116,13 @@ class Ranking {
 			});
 
 		} else {
+			this.obj.addChild(this.iconB)
+			this.iconB.width = GameConst.StageW
+			this.iconB.height = GameConst.StageH
+
 			this.obj.addChild(this.bg)
+			this.bg.y = GameConst.StageH - this.bg.height
+			
 			//处理遮罩，避免开放数据域事件影响主域。
 			this.rankingListMask = new egret.Shape();
 			this.rankingListMask.graphics.beginFill(0x000000, 1);
@@ -139,8 +148,8 @@ class Ranking {
 					command: "all",
 					openid: GameConst.player.openid,
 					rankingScore: this.rankingScore,
-					rankingTime:this.rankingTime,
-					flayRanking:this.flayRanking
+					rankingTime: this.rankingTime,
+					flayRanking: this.flayRanking
 				});
 			} else {
 				platform.openDataContext.postMessage({
@@ -151,7 +160,7 @@ class Ranking {
 					command: "open",
 					openid: GameConst.player.openid,
 					data: JSON.stringify([]),
-					flayRanking:this.flayRanking
+					flayRanking: this.flayRanking
 				});
 			}
 			this.obj.addChild(GameConst.Ranking);

@@ -91,9 +91,9 @@ class Main extends eui.UILayer {
         // 把this设置为场景管理器的根舞台
         SceneManager.instance.setStage(this)
         // 调用SceneManager的静态方法
-        //SceneManager.toMainScene()
-        if (GameConst.player) SceneManager.toMainScene()
-        else SceneManager.toLoginScene();
+        SceneManager.toMainScene()
+        // if (GameConst.player) SceneManager.toMainScene()
+        // else SceneManager.toLoginScene();
     }
 
 }

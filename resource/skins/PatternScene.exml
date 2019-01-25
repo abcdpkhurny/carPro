@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="PatternSceneSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
 	<w:Config id="16615503923" ></w:Config>
-	<e:Image source="main_bg_jpg"  />
+	<e:Image source="icon_back_png"  width="640" height="1136"/>
+	<e:Image id="imgBg" source="main_item_bg_png" y="377"/>
+	<e:Image id="imgLogo" source="icon_logo_png" horizontalCenter="0" y="167"/>
 	<e:ToggleButton id="mbtnRacing" name="竞速模式" horizontalCenter="0" y="525">
 		<e:Skin states="up,down,disabled,disabledAndSelected" >
 			<e:Image scale9Grid="1,3,8,8" source="btn_racing_png" width.down="90%" height.down="90%" width="100%" height="100%" horizontalCenter="0" verticalCenter="0"/>
@@ -17,6 +19,6 @@
 			<e:Image scale9Grid="1,3,8,8" source="btn_back_png"  width="100%" height="100%" />
 		</e:Skin>
 	</e:ToggleButton>
-	<e:Label size="36" fontFamily="微软雅黑" text="路面不设置障碍，注意路况" textAlign="center" horizontalCenter="0" y="680"/>
-	<e:Label size="36" fontFamily="微软雅黑" text="赛车在前进过程中躲避路面障碍" textAlign="center" horizontalCenter="0" y="894"/>
+	<e:Label id="labRacing" size="36" fontFamily="微软雅黑" text="路面不设置障碍，注意路况" textAlign="center" horizontalCenter="0" y="680"/>
+	<e:Label id="labNormal" size="36" fontFamily="微软雅黑" text="赛车在前进过程中躲避路面障碍" textAlign="center" horizontalCenter="0" y="894"/>
 </e:Skin>

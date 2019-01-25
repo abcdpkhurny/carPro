@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="MainInfoSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
 	<w:Config id="167c072c4c8" ></w:Config>
-	<e:Image source="main_info_jpg"/>
+	<e:Image source="main_info_head_png" />
+	<e:Image id="imgBg" source="icon_yellow_png" y="100" width="640" height="1136"/>
 	<e:Image id="imgClose" source="btn_back2_png"  x="31.77" y="24.75" scaleX="0.7" scaleY="0.7"/>
+	<e:Image id="imgWhite" source="icon_white_png" scale9Grid="20,20,100,100" width="607" height="920" anchorOffsetY="0" horizontalCenter="0" y="160"/>
+	<e:Scroller id="src_build" width="597" height="920"  scrollPolicyH="off" scrollPolicyV="on" horizontalCenter="0" y="160" anchorOffsetY="0">
+		<e:Group >
+		<e:Image source="main_info_explain_png"/>
+			<e:layout>
+				<e:VerticalLayout />
+			</e:layout>
+		</e:Group>
+	</e:Scroller>
 </e:Skin>

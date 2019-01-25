@@ -10,9 +10,8 @@ class RacingScene extends eui.Component {
 	public chooseUI: ChooseUI
 	public rankingRac: Ranking
 	public backShp: egret.Shape
-	public bg: egret.Sprite
-	public bgLen: number
-	public twBg: egret.Tween
+	public bg: egret.Sprite		//背景
+	public bgLen: number		//需要背景重置的距离
 
 	private ctnrRA: egret.Sprite;
 
@@ -52,17 +51,6 @@ class RacingScene extends eui.Component {
 			this.ctnrRA.addChild(this.racingUI);
 			//测试
 			this.racingUI.up = this.kmGrade + "";
-
-			//测试用
-			// this.racingUI.btnBack.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-			// 	console.log("黄色")
-			// }, this)
-			// this.racingUI.btnShop.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-			// 	console.log("蓝色")
-			// 	GameConst.removeChild(this.ctnrRA)
-			// 	this.clearTime();
-			// 	this.gameOver = true
-			// }, this)
 		}
 		//this.racingRun();
 		this.openChooseUI()
