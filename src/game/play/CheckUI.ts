@@ -40,7 +40,6 @@ class CheckUI extends eui.Component implements eui.UIComponent {
 		if (!this.loading) {
 			this.loading = new LoadingUI()
 		}
-		//测试用
 		this.mbtnYse.addEventListener(egret.TouchEvent.TOUCH_END, this.checkout, this)
 		this.textCheck.addEventListener(egret.FocusEvent.FOCUS_IN, () => {
 			this.y = -450 - len
@@ -86,22 +85,6 @@ class CheckUI extends eui.Component implements eui.UIComponent {
 		this.imgBtn.source = "check_yes1_png"
 		//这里是图片处理
 		this.receiveCheck()
-	}
-
-	public initTextCheck() {
-		this.textCheck = new eui.TextInput();
-		this.textCheck.inputType = egret.TextFieldInputType.TEXT
-		this.textCheck.prompt = "请输入验证码"
-		this.textCheck.width = 206
-		this.textCheck.height = 29
-		this.textCheck.horizontalCenter = -87
-		this.textCheck.y = 738.67
-		this.textCheck.addEventListener(egret.FocusEvent.FOCUS_IN, () => {
-			this.y = -400
-		}, this)
-		this.textCheck.addEventListener(egret.FocusEvent.FOCUS_OUT, () => {
-			this.y = 0
-		}, this)
 	}
 
 	private ChanReqType = "YCW_JSONP"
