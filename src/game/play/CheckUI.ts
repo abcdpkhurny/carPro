@@ -2,14 +2,16 @@
  * 切片检验类
  */
 class CheckUI extends eui.Component implements eui.UIComponent {
-	private btnDa: eui.Button
-	private btnHuan: eui.Button
+	private imgBg: eui.Image
+	private imgCheckBg: eui.Image
 	private imgText: eui.Image
-	public mbtnYse: eui.ToggleButton
-	private imgBtn: eui.Image
 
 	public textCheck: eui.TextInput
 	public textError: eui.Label
+
+	public mbtnYse: eui.ToggleButton
+
+	private imgBtn: eui.Image
 
 	public pic: string
 	public picName: string
@@ -29,21 +31,23 @@ class CheckUI extends eui.Component implements eui.UIComponent {
 		super.childrenCreated();
 		//调节页面高度，避免键盘弹出错位
 		this.height = GameConst.StageH
+		var list: any[] = [this.imgBg, this.imgCheckBg, this.imgText, this.textCheck, this.textError, this.mbtnYse]
+		var len = this.imgBg.y * (1 - 1136 / GameConst.StageH)
+		for (var i = 0; i < list.length; i++) {
+			var data = list[i]
+			data.y = data.y + len
+		}
 		if (!this.loading) {
 			this.loading = new LoadingUI()
 		}
+		//测试用
 		this.mbtnYse.addEventListener(egret.TouchEvent.TOUCH_END, this.checkout, this)
-		this.btnDa.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
-			this.imgText.scaleX = 1.2
-			this.imgText.scaleY = 1.2
-		}, this)
 		this.textCheck.addEventListener(egret.FocusEvent.FOCUS_IN, () => {
-			this.y = -400
+			this.y = -450 - len
 		}, this)
 		this.textCheck.addEventListener(egret.FocusEvent.FOCUS_OUT, () => {
 			this.y = 0
 		}, this)
-		this.btnHuan.addEventListener(egret.TouchEvent.TOUCH_TAP, this.swopText, this)
 		this.textCheck.addEventListener(egret.Event.CHANGE, () => {
 			if (this.textCheck.text == "") {
 				this.mbtnYse.touchEnabled = false;
@@ -156,7 +160,7 @@ class CheckUI extends eui.Component implements eui.UIComponent {
 		}, this)
 	}
 
-	public isExit: boolean
+	public isExit: boolean	//判断是否点了退出键
 	public errUI: ErrUI
 
 	public drawBase64(base64) {
@@ -207,14 +211,6 @@ class CheckUI extends eui.Component implements eui.UIComponent {
 		}, this)
 		//网络超时，失败
 		req.addEventListener(egret.IOErrorEvent.IO_ERROR, this.onErr, this)
-	}
-
-	/**
-	 * 交换
-	 */
-	private swopText() {
-		this.textError.alpha = 0;
-		this.receiveCheck()
 	}
 
 	public removeChildAll() {

@@ -2,6 +2,7 @@
  * 赛车选择类
  */
 class ChooseUI extends eui.Component implements eui.UIComponent {
+	public imgBg: eui.Image
 	public mbtn0: eui.ToggleButton
 	public mbtn1: eui.ToggleButton
 	public mbtn2: eui.ToggleButton
@@ -29,6 +30,8 @@ class ChooseUI extends eui.Component implements eui.UIComponent {
 
 	protected childrenCreated(): void {
 		super.childrenCreated();
+		var list: any[] = [this.imgBg, this.mbtn0, this.mbtn1, this.mbtn2, this.mbtn3, this.mbtnYse, this.mbtnLeft, this.mbtnRight]
+		GameConst.screenDeploy(list, this.height)
 		this.mbtnYse.addEventListener(egret.TouchEvent.TOUCH_TAP, this.clickYse, this)
 		this.mbtnLeft.addEventListener(egret.TouchEvent.TOUCH_TAP, this.clickLeft, this)
 		this.mbtnRight.addEventListener(egret.TouchEvent.TOUCH_TAP, this.clickRight, this)

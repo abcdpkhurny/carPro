@@ -2,7 +2,7 @@
 <e:Skin class="ChooseUISkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui"
         xmlns:w="http://ns.egret.com/wing">
 	<w:Config id="1665d418e4e"></w:Config>
-	<e:Image source="bg_back_png" y="457" horizontalCenter="0" alpha="0.5" />
+	<e:Image id="imgBg" source="bg_back_png" y="457" horizontalCenter="0" alpha="0.5" />
 	<e:ToggleButton id="mbtn0" name="第一格" width="94" height="207" y="464.5" x="106.28">
 		<e:Skin states="up,down,disabled,disabledAndSelected">
 			<e:Image id="pic" source="play_car0_png" width="90%" height="90%" horizontalCenter="0" verticalCenter="0" />
@@ -27,7 +27,7 @@
 			<e:Image source="icon_xuan_png" alpha="0" alpha.down="1" />
 		</e:Skin>
 	</e:ToggleButton>
-	<e:ToggleButton id="mbtnYse" name="确认选择" x="196" y="715.5">
+	<e:ToggleButton id="mbtnYse" name="确认选择" x="196" y="769.5">
 		<e:Skin states="up,down,disabled,disabledAndSelected">
 			<e:Image id="pic" source="btn_xuan_png" width.down="90%" height.down="90%" horizontalCenter="0" verticalCenter="0" />
 		</e:Skin>

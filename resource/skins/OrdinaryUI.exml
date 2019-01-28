@@ -2,6 +2,7 @@
 <e:Skin class="OrdinaryUISkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
 	<w:Config id="16622fbd8af" ></w:Config>
 	<e:Image id="play_end" source="play_end_png" horizontalCenter="0" y="-87"/>
+	<e:Image id="play_car" source="play_car0_png"  x="289.5" y="700"/>
 	<e:ToggleButton id="mbtnLeft" name="左移"  y="843.91" x="27.28">
 		<e:Skin states="up,down,disabled,disabledAndSelected" >
 			<e:Image source="play_right_png" rotation="180" width.down="90%" height.down="90%"  width="100%" height="100%" horizontalCenter="0" verticalCenter="0"/>
@@ -12,13 +13,12 @@
 			<e:Image source="play_right_png" width.down="90%" height.down="90%"  width="100%" height="100%" horizontalCenter="0" verticalCenter="0"/>
 		</e:Skin>
 	</e:ToggleButton>
-	<e:Image id="play_car" source="play_car0_png"  x="289.5" y="700"/>
-	<e:Image id="btnShop" source="play_blue_png"  left="0" y="56.1"/>
-	<e:Image id="btnBack" source="play_yellow_png" y="154.56"/>
-	<e:Label size="18" fontFamily="微软雅黑" text="得分" bold="true" textColor="0xffffff"  x="8" y="66.1"/>
-	<e:Label id="textScore" size="18" fontFamily="微软雅黑" text="10000.00km" bold="true" textColor="0xffffff" width="114" x="6" y="101.1" textAlign="center"  anchorOffsetX="0"/>
-	<e:Label id="textPattern" size="18" fontFamily="微软雅黑" text="加速等级" bold="true" textColor="0x6d4c0e"  x="8" y="163.1"/>
-	<e:Label id="textPass" size="18" fontFamily="微软雅黑" text="0" bold="true" textColor="0x6d4c0e" width="100" x="15" y="193.1" textAlign="center" />
+	<e:Image id="btnShop" source="play_blue_png"  left="0" y="62.1"/>
+	<e:Image id="btnBack" source="play_yellow_png" y="166.56"/>
+	<e:Label size="18" fontFamily="微软雅黑" text="得分" bold="true" textColor="0xffffff"  x="8" y="72.1"/>
+	<e:Label id="textScore" size="18" fontFamily="微软雅黑" text="10000.00km" bold="true" textColor="0xffffff" width="114" x="6" y="107.1" textAlign="center"  anchorOffsetX="0"/>
+	<e:Label id="textPattern" size="18" fontFamily="微软雅黑" text="加速等级" bold="true" textColor="0x6d4c0e"  x="8" y="175.1"/>
+	<e:Label id="textPass" size="18" fontFamily="微软雅黑" text="0" bold="true" textColor="0x6d4c0e" width="100" x="15" y="205.1" textAlign="center" />
 	<e:Image source="icon_life_png" x="15" y="13"/>
 	<e:Label text="x" x="55.02" y="11"/>
 	<e:Label id="textUp" size="28" fontFamily="微软雅黑" text="3" bold="true" textColor="0xff0000" width="50" x="64" y="14.98" textAlign="center" />

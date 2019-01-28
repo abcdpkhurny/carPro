@@ -36,6 +36,8 @@ class OrdinaryUI extends eui.Component implements eui.UIComponent {
 
 
 	protected childrenCreated(): void {
+		var list: any[] = [this.play_car, this.mbtnLeft, this.mbtnRight]
+		GameConst.screenDeploy(list, this.height)
 		super.childrenCreated();
 		//车的移动距离
 		this.range = this._stage.stageWidth / 2 - this.stage.stageWidth * 0.22

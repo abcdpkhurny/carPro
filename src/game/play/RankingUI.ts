@@ -2,13 +2,15 @@
  * 得分显示类
  */
 class RankingUI extends eui.Component implements eui.UIComponent {
+	private imgBg: eui.Image
+	public textUse: eui.Label;
+	public textOldUse: eui.Label;
+	public mbtnRanking: eui.ToggleButton
+
 	public mbtnRestart: eui.ToggleButton
 	public mbtnBack: eui.ToggleButton
 	public src_ranking: eui.Scroller;
 	public list_raning: eui.List;
-	public textUse: eui.Label;
-	public textOldUse: eui.Label;
-	public mbtnRanking: eui.ToggleButton
 
 	public constructor() {
 		super();
@@ -20,6 +22,13 @@ class RankingUI extends eui.Component implements eui.UIComponent {
 
 
 	protected childrenCreated(): void {
+		this.mbtnRestart.y = this.mbtnRestart.y / 1136 * GameConst.StageH
+		var list: any[] = [this.imgBg, this.textUse, this.textOldUse,this.mbtnRanking]
+		var len = this.imgBg.y * (1 - 1136 / GameConst.StageH)
+		for (var i = 0; i < list.length; i++) {
+			var data = list[i]
+			data.y = data.y + len
+		}
 		super.childrenCreated();
 		this.mbtnRestart.addEventListener(egret.TouchEvent.TOUCH_TAP, this.restart, this)
 		this.mbtnBack.addEventListener(egret.TouchEvent.TOUCH_TAP, this.restart, this)
@@ -28,14 +37,14 @@ class RankingUI extends eui.Component implements eui.UIComponent {
 		//this.init();
 	}
 
-	public initNormal(){
-		this.textUse.text="本局所得分数："
-		this.textOldUse.text="历史最大得分数："
+	public initNormal() {
+		this.textUse.text = "本局所得分数："
+		this.textOldUse.text = "历史最大得分数："
 	}
 
-	public initRacing(){
-		this.textUse.text="本局使用时间："
-		this.textOldUse.text="历史最快时间：："
+	public initRacing() {
+		this.textUse.text = "本局使用时间："
+		this.textOldUse.text = "历史最快时间：："
 	}
 
 	public init() {

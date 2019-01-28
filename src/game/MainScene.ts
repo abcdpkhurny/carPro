@@ -32,7 +32,6 @@ class MainScene extends eui.Component implements eui.UIComponent {
 		var list: any[] = [this.imgLogo, this.labInfo, this.labRanking, this.mbtnStart, this.mbtnShare, this.mbtnInfo, this.mbtnRanking]
 		GameConst.screenDeploy(list, this.height)
 		this.imgBg.y = GameConst.StageH - this.imgBg.height
-		console.log(this.imgLogo.y)
 		this.mbtns = [this.mbtnStart, this.mbtnShare, this.mbtnInfo, this.mbtnRanking];
 		for (var i: number = this.mbtns.length - 1; i > -1; --i) {
 			// 事件委托, 点击按钮的时候触发toggleBtn

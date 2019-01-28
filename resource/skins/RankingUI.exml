@@ -11,7 +11,7 @@
 			<e:Image source="btn_replay_png" width.down="90%" height.down="90%" horizontalCenter="0" verticalCenter="0" />
 		</e:Skin>
 	</e:ToggleButton>
-	<e:Image source="ranking_bg_png" horizontalCenter="0" y="350" anchorOffsetY="0" height="184"/>
+	<e:Image id="imgBg" source="ranking_bg_png" horizontalCenter="0" y="350" anchorOffsetY="0" height="184"/>
 	<e:Label id="textUse" text="本局使用时间：" size="36" textColor="0x000000"  y="372" x="92"/>
 	<e:Label id="textOldUse" text="历史最低使用时间：" size="36" textColor="0x000000"  y="410" x="92"/>
 	<e:ToggleButton id="mbtnRanking" name="排行榜" width="160" height="60" horizontalCenter="0" y="460">

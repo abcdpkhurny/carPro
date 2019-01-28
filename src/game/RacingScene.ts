@@ -24,13 +24,14 @@ class RacingScene extends eui.Component {
 	private kmPass: number = 0;
 	private kmSum: number;
 
-	private gameOver: boolean;
+	private gameOver: boolean = true
 	public constructor() {
 		super()
 	}
 	//竞速
 	public toRacing() {
-		this.kmSum = 100;
+		//正常设置100
+		this.kmSum = 5;
 		if (this.ctnrRA) {
 			GameConst.removeChild(this.checkUI)
 			this.addChild(this.ctnrRA);
@@ -39,7 +40,7 @@ class RacingScene extends eui.Component {
 			this.kmGrade = 0;
 			this.pass_time = 0;
 			this.kmPass = 0;
-			this.gameOver = false;
+			this.gameOver = true;
 			this.racingUI.init();
 			//加速度
 			this.racingUI.up = "0"
@@ -53,7 +54,8 @@ class RacingScene extends eui.Component {
 			this.racingUI.up = this.kmGrade + "";
 		}
 		//this.racingRun();
-		this.openChooseUI()
+		//this.openChooseUI()
+		this.openCheckUI()
 	}
 
 	/**
@@ -220,19 +222,24 @@ class RacingScene extends eui.Component {
 		}
 		this.controlBacksh(true)
 		this.ctnrRA.addChild(this.checkUI)
+		console.log(this.ctnrRA)
+		console.log(this.checkUI.parent)
 		this.checkUI.once(egret.Event.REMOVED_FROM_STAGE, () => {
 			if (!this.checkUI.pass) {
 				return
 			}
 			this.controlBacksh(false)
-			let grade = ++this.kmGrade
-			this.racingUI.up = grade + ""
-			this.racingRun()
 			this.checkUI.pass = false
 			if (this.checkUI.isExit) {
+				let grade = ++this.kmGrade
+				this.racingUI.up = grade + ""
+				this.racingRun()
 				this.clearTime()
 				this.gameOver = true;
 				GameConst.removeChild(this.ctnrRA)
+			}
+			if (this.gameOver) {
+				this.openChooseUI();
 			}
 			//console.log(this.checkUI.isExit)
 		}, this)
@@ -247,6 +254,7 @@ class RacingScene extends eui.Component {
 		} else {
 			this.chooseUI.init()
 		}
+		this.gameOver = false
 		this.controlBacksh(true)
 		this.ctnrRA.addChild(this.chooseUI)
 		this.chooseUI.mbtnYse.once(egret.TouchEvent.TOUCH_END, () => {
