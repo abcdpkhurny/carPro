@@ -31,7 +31,7 @@ class RacingScene extends eui.Component {
 	//竞速
 	public toRacing() {
 		//正常设置100
-		this.kmSum = 5;
+		this.kmSum = 100;
 		if (this.ctnrRA) {
 			GameConst.removeChild(this.checkUI)
 			this.addChild(this.ctnrRA);
@@ -237,8 +237,7 @@ class RacingScene extends eui.Component {
 				this.clearTime()
 				this.gameOver = true;
 				GameConst.removeChild(this.ctnrRA)
-			}
-			if (this.gameOver) {
+			}else{
 				this.openChooseUI();
 			}
 			//console.log(this.checkUI.isExit)

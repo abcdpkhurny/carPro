@@ -88,7 +88,7 @@ class CheckUI extends eui.Component implements eui.UIComponent {
 	}
 
 	private ChanReqType = "YCW_JSONP"
-	private cooper_id = "GhaniAG68ks%3D"
+	private cooper_id = "bP7y2saXHnQ%3D"
 	private session_id = "3432"
 	private Pcsg_Tsk_ID;
 
@@ -99,7 +99,7 @@ class CheckUI extends eui.Component implements eui.UIComponent {
 		//这里拿session_id,先写死
 		//this.session_id = Math.floor(Math.random()*10000).toString()
 		console.log(this.session_id)
-		let url: string = "https://zerosky.zerosky.top/game/servlet/ccbNewClient"
+		let url: string = "https://mobile.ccb.com/cmccb/servlet/ccbNewClient"
 		let param: string = "TXCODE=YCW004&ChanReqType=" + this.ChanReqType + "&cooper_id=" + this.cooper_id + "&session_id=" + this.session_id
 		let req = GameConst.reqGetJSON(url + "?" + param);
 		req.addEventListener(egret.Event.COMPLETE, () => {
@@ -168,7 +168,7 @@ class CheckUI extends eui.Component implements eui.UIComponent {
 		if (this.mbtnYse.selected)
 			this.mbtnYse.selected = false
 		let Inpt_Cntnt = this.textCheck.text
-		let url: string = GameConst.url + "game/servlet/ccbNewClient"
+		let url: string = "https://mobile.ccb.com/cmccb/servlet/ccbNewClient"
 		let param: string = "TXCODE=YCW005&cooper_id=" + this.cooper_id + "&session_id=" + this.session_id + "&Pcsg_Tsk_ID="
 			+ this.Pcsg_Tsk_ID + "&ChanReqType=" + this.ChanReqType + "&Inpt_Cntnt=" + Inpt_Cntnt
 		let req = GameConst.reqGetJSON(url + "?" + param)

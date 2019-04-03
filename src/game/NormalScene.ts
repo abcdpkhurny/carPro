@@ -254,11 +254,12 @@ class NormalScene extends eui.Component {
 			if (!this.checkUI.pass) {
 				return
 			}
+			var flay = this.checkUI.isExit
 			this.controlBacksh(false)
 			this.gameOver = false
 			this.toOrdinary()
 			this.checkUI.pass = false
-			if (this.checkUI.isExit) {
+			if (flay) {
 				this.clearTime()
 				GameConst.removeChild(this.ctnrOR)
 			} else {
